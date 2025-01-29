@@ -2,7 +2,7 @@
 {% if page.title != 'Home' and page.title != 'About' and page.title != '404 Not Found' %}
 <div id="backtotop">
     <a href="#top" style="position:fixed; bottom:5px; right:1px; ">
-        <img src="/assets/homepage/back-to-top.png" style="width:35px; height:auto;" />
+        <img src="{{ site.baseurl }}/assets/homepage/back-to-top.png" style="width:35px; height:auto;" />
     </a>
 </div>
 {% endif %}
@@ -10,7 +10,7 @@
 <footer class="site-footer" {% if page.title !='Home' and page.title !='About' and page.title !='404 Not Found' %}
     style="margin-top: 100px;" {% endif %}>
     <div class="container">
-        <a href="{{ site.baseurl }}"><img src="/assets/homepage/brand.png" height="30" width="auto"
+        <a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/assets/homepage/brand.png" height="30" width="auto"
                 style="vertical-align: top; display: inline-block;" /></a>
         &nbsp;
         <p style="display: inline-block;">
@@ -25,8 +25,8 @@
 </footer>
 
 {% if page.title != 'Home' and page.title != 'About' and page.title != '404 Not Found' %}
-<script type="text/javascript" defer src="/assets/js/prism.js"></script>
-<script type="text/javascript" src="/assets/js/anchor.min.js"></script>
+<script type="text/javascript" defer src="{{ site.baseurl }}/assets/js/prism.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}/assets/js/anchor.min.js"></script>
 <script type="text/javascript">
     anchors.options = {
         placement: 'right',
