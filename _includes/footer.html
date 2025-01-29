@@ -10,11 +10,11 @@
 <footer class="site-footer" {% if page.title !='Home' and page.title !='About' and page.title !='404 Not Found' %}
     style="margin-top: 100px;" {% endif %}>
     <div class="container">
-        <a href="/"><img src="/assets/homepage/brand.png" height="30" width="auto"
+        <a href="{{ site.baseurl }}"><img src="/assets/homepage/brand.png" height="30" width="auto"
                 style="vertical-align: top; display: inline-block;" /></a>
         &nbsp;
         <p style="display: inline-block;">
-            <a href="/about/">About</a>
+            <a href="{{ site.baseurl }}/about/">About</a>
             &nbsp;
             <a href="https://github.com/upj53/upj53.github.io">GitHub</a>
             &nbsp;
