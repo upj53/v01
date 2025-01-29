@@ -23,7 +23,7 @@
                 <!---------그룹 2: my----------->
                 {% for item in site.data.menu_group_2 %}
                 <li class="nav-item">
-                    <a href="{{ item.link }}" class="nav-link {% if page.url == item.link %}active{% endif %}">{{ item.name }}</a>
+                    <a href="{{ site.baseurl }}{{ item.link }}" class="nav-link {% if page.url == item.link %}active{% endif %}">{{ item.name }}</a>
                 </li>
                 {% endfor %}
 
@@ -57,11 +57,11 @@
                         {% else %}
                         {% if jekyll.environment == "development" %}
                         <li><a class="dropdown-item {% if page.url == i.permalink %}active{% endif %}"
-                                href="{{ i.permalink }}">{{ i.title }}</a></li>
+                                href="{{ site.baseurl }}{{ i.permalink }}">{{ i.title }}</a></li>
                         {% else %}
                         {% unless i.private %}
                         <li><a class="dropdown-item {% if page.url == i.permalink %}active{% endif %}"
-                                href="{{ i.permalink }}">{{ i.title }}</a></li>
+                                href="{{ site.baseurl }}{{ i.permalink }}">{{ i.title }}</a></li>
                         {% endunless %}
                         {% endif %}
                         {% endif %}
@@ -77,11 +77,11 @@
                         {% else %}
                         {% if jekyll.environment == "development" %}
                         <li><a class="dropdown-item {% if page.url == i.permalink %}active{% endif %}"
-                                href="{{ i.permalink }}">{{ i.title }}</a></li>
+                                href="{{ site.baseurl }}{{ i.permalink }}">{{ i.title }}</a></li>
                         {% else %}
                         {% unless i.private %}
                         <li><a class="dropdown-item {% if page.url == i.permalink %}active{% endif %}"
-                                href="{{ i.permalink }}">{{ i.title }}</a></li>
+                                href="{{ site.baseurl }}{{ i.permalink }}">{{ i.title }}</a></li>
                         {% endunless %}
                         {% endif %}
                         {% endif %}
@@ -97,11 +97,11 @@
                         {% else %}
                         {% if jekyll.environment == "development" %}
                         <li><a class="dropdown-item {% if page.url == i.permalink %}active{% endif %}"
-                                href="{{ i.permalink }}">{{ i.title }}</a></li>
+                                href="{{ site.baseurl }}{{ i.permalink }}">{{ i.title }}</a></li>
                         {% else %}
                         {% unless i.private %}
                         <li><a class="dropdown-item {% if page.url == i.permalink %}active{% endif %}"
-                                href="{{ i.permalink }}">{{ i.title }}</a></li>
+                                href="{{ site.baseurl }}{{ i.permalink }}">{{ i.title }}</a></li>
                         {% endunless %}
                         {% endif %}
                         {% endif %}
@@ -117,11 +117,11 @@
                         {% else %}
                         {% if jekyll.environment == "development" %}
                         <li><a class="dropdown-item {% if page.url == i.permalink %}active{% endif %}"
-                                href="{{ i.permalink }}">{{ i.title }}</a></li>
+                                href="{{ site.baseurl }}{{ i.permalink }}">{{ i.title }}</a></li>
                         {% else %}
                         {% unless i.private %}
                         <li><a class="dropdown-item {% if page.url == i.permalink %}active{% endif %}"
-                                href="{{ i.permalink }}">{{ i.title }}</a></li>
+                                href="{{ site.baseurl }}{{ i.permalink }}">{{ i.title }}</a></li>
                         {% endunless %}
                         {% endif %}
                         {% endif %}
@@ -140,7 +140,7 @@
                         }
                     </script>
                     <!-- <a href="javascript:getID();" class="nav-link" style="color: rgba(0, 0, 0, 0);">ID</a> -->
-                    <a href="http://127.0.0.1:4000" class="nav-link" style="color: rgba(0, 0, 0, 0);">ID</a>
+                    <a href="{{ site.url }}{{ site.baseurl }}" class="nav-link" style="color: rgba(0, 0, 0, 0);">ID</a>
                     <!-- style="color: #FF7C36;" -->
                 </li>
 
@@ -150,7 +150,7 @@
                         링크
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/todo/">ToDo</a></li>
+                        <li><a class="dropdown-item" href="{{ site.baseurl }}/todo/">ToDo</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <!--
                         <li><a class="dropdown-item" href=""></a></li>
